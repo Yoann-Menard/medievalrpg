@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_27_124656) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_28_131901) do
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.integer "level"
+    t.integer "strength"
+    t.integer "hp"
+    t.integer "points"
+    t.integer "xp"
+    t.integer "id_user"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "quests", force: :cascade do |t|
     t.string "title"
-    t.integer "step"
+    t.integer "exp"
+    t.string "item"
+    t.string "content"
+    t.string "png"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

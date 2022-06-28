@@ -1,0 +1,12 @@
+<% if current_user %>
+<% @Players.each do |player| %>
+<h1><%= player.name %></h1>
+<p>HP : <%= player.hp %></p>
+<p> Strength : <%= player.strength %></p>
+<p> XP : <%= player.xp %></p>
+<% end %>
+<% else %>
+
+Goodbye
+
+<% end %>

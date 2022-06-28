@@ -2,8 +2,14 @@
 
 one:
   title: MyString
-  step: 1
+  exp: 1
+  item: MyString
+  content: MyString
+  png: MyString
 
 two:
   title: MyString
-  step: 1
+  exp: 1
+  item: MyString
+  content: MyString
+  png: MyString

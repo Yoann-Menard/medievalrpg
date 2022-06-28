@@ -4,7 +4,8 @@
 <% @quests.each do |quest| %>
 <li>
 <%= link_to quest.title, quest %>
-<%= quest.title %>
+<%= quest.step %>
+<%= quest.completed %>
 </a>
 </li>
 <% end %>
