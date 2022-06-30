@@ -11,26 +11,17 @@
 </ul>
 </div>
 <% end %>
-
-<p>
-<span class="input-before"></span><%= f.text_field :title, :placeholder => "Title" %><span class="input-after"></span>
-</p>
-
-<p>
-<span class="input-before"></span><%= f.text_field :exp, :placeholder => "XP" %><span class="input-after"></span>
-</p>
-
-<p>
-<%= f.text_area :content, size: "40x10", :placeholder => "Content" %>
-</p>
-
-<p>
-<span class="input-before"></span><%= f.text_field :item, :placeholder => "Item" %><span class="input-after"></span>
-</p>
-
-<p>
-<span class="input-before"></span><%= f.text_field :png, :placeholder => "Png" %><span class="input-after"></span>
-</p>
-
-<p><%= f.submit "Submit form" %></p>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :level %>
+<%= f.number_field :level %>
+<%= f.label :strength %>
+<%= f.number_field :strength %>
+<%= f.label :hp %>
+<%= f.number_field :hp %>
+<%= f.label :points %>
+<%= f.number_field :points %>
+<%= f.label :xp %>
+<%= f.number_field :xp %>
+<%= f.submit %>
 <% end %>

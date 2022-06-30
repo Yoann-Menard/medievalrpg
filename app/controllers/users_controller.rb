@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "User created"
-      redirect_to root_path
+      redirect_to users_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,6 +28,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(:name, :email, :password, :is_game_master)
   end
 end

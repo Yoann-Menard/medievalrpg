@@ -1,16 +1,19 @@
 
 <% if current_user %>
-currently logged in as <%= current_user.email %>
+<p style="color: green">currently logged in as <%= current_user.email %>
 
-Select your character to continue the game.
-list of characters:
+<p>Select your character : </p>
 <% @players.each do |player| %>
-<%= player.name %>
+<h1><%= player.name %></h1>
 <% end %>
 
 <% else %>
 
- Please register to start a new game.
- <%= link_to "Register" %>
+ Please Register to start a new game.
+ <p><%= link_to "Register", "register" %></p>
+
+ <p>Already have an account?
+  <%= link_to "Login", "login" %>
+  <p>
 
 <% end %>

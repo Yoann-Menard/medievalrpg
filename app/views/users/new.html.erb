@@ -11,14 +11,13 @@
 </ul>
 </div>
 <% end %>
-<p>
-	<span class="input-before"></span><%= f.text_field :email, :placeholder => "Email" %><span class="input-after"></span>
-</p>
-<p>
-	<span class="input-before"></span><%= f.password_field :password, :placeholder => "Password" %><span class="input-after"></span>
-</p>
-<p>
-	<span class="input-before"></span><%= f.password_field :password_confirmation, :placeholder => "Confirm your password" %><span class="input-after"></span>
-</p>
-<p><%= f.submit "Register" %></p>
+<%= f.label :email %>
+<%= f.text_field :email %>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %>
+<%= f.label :is_game_master %>
+<%= f.check_box :is_game_master %>
+<%= f.submit %>
 <% end %>

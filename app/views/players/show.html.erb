@@ -1,0 +1,17 @@
+<% provide(:name, @player.name) %>
+
+
+<h1><%= @player.name %></h1>
+<p>HP : <%= @player.hp %></p>
+<p> Strength : <%= @player.strength %></p>
+<p> XP : <%= @player.xp %></p>
+<p> Level : <%= @player.level %></p>
+<p> Points : <%= @player.points %></p>
+
+<div>
+  <%= link_to "Edit Player", edit_player_path(@player) %> |
+  <%= link_to "Back to Players", players_path %>
+
+  <%= button_to "Delete Player", @player, method: :delete %>
+</div>
+
