@@ -1,11 +1,11 @@
-<h1>New Quest</h1>
+<h1>Create a new character</h1>
 
-<%= form_for @quest do |f| %>
-<% if @quest.errors.any? %>
+<%= form_for @player do |f| %>
+<% if @player.errors.any? %>
 <div class="error_messages">
 <h2>Error Message</h2>
 <ul>
-<% for message in @quest.errors.full_messages %>
+<% for message in @player.errors.full_messages %>
 <li><%= message %></li>
 <% end %>
 </ul>

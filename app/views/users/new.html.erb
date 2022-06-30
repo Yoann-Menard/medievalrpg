@@ -1,0 +1,24 @@
+<h1>Register</h1>
+
+<%= form_for @user do |f| %>
+<% if @user.errors.any? %>
+<div class="error_messages">
+<h2>Error message</h2>
+<ul>
+<% for message in @user.errors.full_messages %>
+<li><%= message %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+<p>
+	<span class="input-before"></span><%= f.text_field :email, :placeholder => "Email" %><span class="input-after"></span>
+</p>
+<p>
+	<span class="input-before"></span><%= f.password_field :password, :placeholder => "Password" %><span class="input-after"></span>
+</p>
+<p>
+	<span class="input-before"></span><%= f.password_field :password_confirmation, :placeholder => "Confirm your password" %><span class="input-after"></span>
+</p>
+<p><%= f.submit "Register" %></p>
+<% end %>

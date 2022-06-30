@@ -1,3 +1,8 @@
+<% provide (:title, @quest.title) %>
+
+
 <h1><%= @quest.title %></h1>
-<p>Step : <%= @quest.step %></p>
-<p>Completed : <%= @quest.completed %></p>
+<h2><%= @quest.exp %></h2>
+<div><%= image_tag(@quest.item, :alt => 'Quest Item picture') %></div>
+<p><%= @quest.content %></p>
+<div><%= image_tag(@quest.png, :alt => 'Quest Png picture') %></div>

@@ -12,17 +12,19 @@ class QuestsController < ApplicationController
   end
 
   def create
+    if admin
     @quest = Quest.new(quest_params)
-
+    else
+      redirect_to_root_path
+    end
     if @quest.save
-      redirect_to @quest
+      flash[:success] = "Quest created"
+      redirect_to quests_path
     else
       render :new, status: :unprocessable_entity
     end
   end
-  # def edit
-  #   @quest = Quest.find(params[:id])
-  # end
+
 def update
   @quest = Quest.find(params[:id])
   if @quest.update(quest_params)
@@ -30,6 +32,7 @@ def update
   else
     render :edit, status: :unprocessable_entity
   end
+end
 
   def destroy
     @quest = Quest.find(params[:id])
@@ -37,9 +40,8 @@ def update
     redirect_to quests_path
   end
 
-  private
     def quest_params
-      params.require(:quest).permit(:title, :step, :completed)
+      params.require(:quest).permit(:title, :exp, :item, :content, :png)
     end
+
  end
-end

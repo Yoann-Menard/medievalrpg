@@ -1,0 +1,16 @@
+
+<% if current_user %>
+currently logged in as <%= current_user.email %>
+
+Select your character to continue the game.
+list of characters:
+<% @players.each do |player| %>
+<%= player.name %>
+<% end %>
+
+<% else %>
+
+ Please register to start a new game.
+ <%= link_to "Register" %>
+
+<% end %>

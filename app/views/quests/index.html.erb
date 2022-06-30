@@ -1,12 +1,8 @@
+<% if current_user %>
 <h1>Quests</h1>
-
-<ul>
 <% @quests.each do |quest| %>
-<li>
-<%= link_to quest.title, quest %>
-<%= quest.step %>
-<%= quest.completed %>
-</a>
-</li>
+<h3><a href="quests/<%= quest.id %>"><%= quest.title %></a> <%= quest.exp %> XP</h3>
 <% end %>
-</ul>
+<% else %>
+No quests available.
+<% end %>
